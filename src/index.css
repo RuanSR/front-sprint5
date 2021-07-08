@@ -1,12 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap");
+html {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+
+html a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html input {
+  outline: none;
+}
+
 .hide {
   display: none;
 }
 
-.header {
+/* .alert {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  color: #721c24;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  padding: 10px;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  z-index: 9999;
+} */
+
+/* .header {
   width: 100%;
   padding-bottom: 10px;
   border-bottom: 1px solid #e0e0e0;
-}
+} */
 
 @media (max-width: 1200px) {
   .header--floating {
@@ -16,19 +45,19 @@
   }
 }
 
-.header__container {
+/* .header__container {
   margin: auto;
   width: 95%;
   max-width: 1200px;
-}
+} */
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   .header__desktop {
     display: none;
   }
-}
+} */
 
-.header__mobile {
+/* .header__mobile {
   display: none;
   margin-bottom: 25px;
 }
@@ -38,9 +67,9 @@
     display: flex;
     align-items: center;
   }
-}
+} */
 
-.header__logo {
+/* .header__logo {
   height: 70px;
   line-height: 70px;
   text-align: center;
@@ -50,18 +79,18 @@
   .header__logo {
     flex-grow: 1;
   }
-}
+} */
 
-.header__img {
+/* .header__img {
   height: 25px;
   transform: translateY(10px);
-}
+} */
 
-.header__search {
+/* .header__search {
   position: relative;
-}
+} */
 
-.header__icon {
+/* .header__icon {
   width: 24px;
   opacity: 26%;
   top: 8px;
@@ -69,9 +98,9 @@
   padding-left: 10px;
   color: rgba(0, 0, 0, 0.26);
   line-height: 40px;
-}
+} */
 
-.header__input {
+/* .header__input {
   height: 40px;
   width: 100%;
   border-radius: 4px;
@@ -88,19 +117,19 @@
   font-weight: 600;
   font-family: "Open Sans";
   color: #9b9b9b;
-}
+} */
 
-.header__drawer {
+/* .header__drawer {
   width: 24px;
   opacity: 54%;
   display: none;
-}
+} */
 
-.header__drawer--active {
+/* .header__drawer--active {
   display: block;
-}
+} */
 
-.header__drawer .menu__title, .header__drawer .close__title {
+.header__drawer, .header__drawer{
   text-transform: lowercase;
   font-size: 0.5625rem;
   font-weight: 400;
@@ -519,4 +548,110 @@
 
 .footer__bottom .copyright__stamp {
   margin: 0 auto;
+}
+
+/* .product_container{
+  display: flex;
+  padding: 25px;
+} */
+
+/* .product_image{
+  width: 50%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+} */
+
+/* .p_image{
+  max-width: 90%;
+  max-height: 90%;
+} */
+
+/* .product_description{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
+
+/* .product_title{
+  font-size: 20px;
+  font-weight: bold;
+} */
+
+/* .select_size{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+} */
+
+/* .box{
+  display: flex;
+} */
+
+.selected_box{
+  color: #FFF;
+  background-color: #000;
+}
+
+.box_size{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.534);
+  font-size: 12px;
+}
+
+/* .container_buy{
+  width: 70%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} */
+
+/* .container_button{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+/* .btnDefault{
+  border: 0px;
+  width: 95%;
+  height: 35px;
+  margin: 5px;
+  color: #FFF;
+  font-weight: bold;
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+} */
+
+/* .product_price{
+  padding-top: 5px;
+  color: #D0403A;
+  font-weight: 500;
+  font-size: 1.4375rem;
+} */
+
+/* .btnSucess{
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #008844;
+} */
+
+/* .btnCancel{
+  background-color: #d10015df;
+} */
+
+.link-box{
+  width: 100%;
+  height: 100%;
 }

@@ -1,39 +1,36 @@
 import { useContext } from "react";
-import styled from "styled-components";
 import MessageContext from "../contexts/MessageContext";
+import styled from "styled-components";
+import "./Message.css";
 
-const Alert = styled.div`
-    padding: 20px;
-    background-color: #f44336; /* Red */
-    color: white;
-    margin-bottom: 15px;
-`;
+function Message(){
 
-const CloseBtn = styled.span`
-    margin-left: 15px;
-    color: white;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
+  const Alert = styled.div`
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    color: #721c24;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    padding: 10px;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 9999;
+  `;
 
-    &:hover {
-        color: black;
-    }
-`;
+  const { message, setMessage } = useContext(MessageContext);
 
-function Message() {
-    const { message, setMessage } = useContext(MessageContext);
-
-    return (
-        message &&
-        <Alert>
-            <CloseBtn onClick={() => setMessage("")} >&times;</CloseBtn>
-            {message}
-        </Alert>
-    );
+  return (
+    message && (
+      <Alert>
+        <span className="closebtn" onClick={() => setMessage("")}>
+          &times;
+        </span>
+        {message}
+      </Alert>
+    )
+  );
 }
 
 export default Message;

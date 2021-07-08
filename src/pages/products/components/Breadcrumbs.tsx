@@ -1,7 +1,9 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
+import {BreadcrumbItemInfo} from '../../../types/BreadcrumbItemInfo';
 import CategoriesContext from "../../../contexts/CategoriesContext";
 
-function BreadcrumbItem({ link, label }) {
+
+const BreadcrumbItem: React.FC<BreadcrumbItemInfo> = ({ link, label }) => {
     return (
         <li className="breadcrumbs__item">
             { link ?
@@ -16,13 +18,14 @@ function BreadcrumbItem({ link, label }) {
     );
 }
 
-function Breadcrumbs() {
-    const { categories } = useContext(CategoriesContext);
+const Breadcrumbs: React.FC = () => {
+    const categoriesContext = useContext(CategoriesContext);
+
     return (
         <section className="main__breadcrumbs breadcrumbs">
             <nav>
                 <ol className="breadcrumbs__list">
-                    {categories.current && categories.current.map(c => <BreadcrumbItem key={c.id} link={c.link} label={c.name} />)}
+                    {categoriesContext.products && categoriesContext.currents?.map(c => <BreadcrumbItem link={c.link} label={c.name} />)}
                 </ol>
             </nav>
         </section>

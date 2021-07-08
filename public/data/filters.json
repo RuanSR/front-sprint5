@@ -1,0 +1,32 @@
+{
+    "filters": [
+        {
+            "id": "name",
+            "label": "Nome"
+        },
+        {
+            "id": "value",
+            "label": "Preço"
+        },
+        {
+            "id": "size",
+            "label": "Tamanho"
+        },
+        {
+            "id": "color",
+            "label": "Cor"
+        },
+        {
+            "id": "department",
+            "label": "Departamento"
+        },
+        {
+            "id": "category",
+            "label": "Categoria"
+        },
+        {
+            "id": "sleeve",
+            "label": "Manga"
+        }
+    ]
+}
